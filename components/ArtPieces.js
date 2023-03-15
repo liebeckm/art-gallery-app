@@ -6,12 +6,13 @@ export default function ArtPieces({ pieces }) {
   return (
     <ul>
       {pieces?.map(({ slug, imageSource, artist, name }) => (
-        <ArtPiecesPreview
-          key={slug}
-          imageSource={imageSource}
-          name={name}
-          artist={artist}
-        />
+        <li key={slug}>
+          <ArtPiecesPreview
+            imageSource={imageSource}
+            title={name}
+            artist={artist}
+          />
+        </li>
       ))}
     </ul>
   );
