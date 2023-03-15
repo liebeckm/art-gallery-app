@@ -1,17 +1,13 @@
 import Image from "next/image";
 
-export default function ArtPiecesPreview({
-  key,
-  imageSource,
-  name,
-  artist,
-  width,
-  height,
-}) {
-  console.log(imageSource);
+export default function ArtPiecesPreview({ key, imageSource, name, artist }) {
+  console.log("key", key);
+
   return (
     <li key={key}>
       <Image
+        key={key}
+        role="image"
         alt="image of artpiece"
         src={imageSource}
         width={500}
